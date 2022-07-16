@@ -1,4 +1,4 @@
-# port_flap_email_alert script will send an email alert if an interface is flapping
+# Port flapping detect script will send an email alert if an interface is flapping
 
 If an interface has flapped 5 times in last 5 minutes this script will shutdown that interface. You can change the flapping count to whatever you want. Then the script will wait for 5 mins and enable the shutdown interface. If that interface still flapping at least once script will shutdown the interface and will send an email alert.
 
@@ -12,7 +12,7 @@ TO_ADDR
 name-server ip address
 http_proxy and https_proxy commands
 ```
-## requirements
+## Requirements
 
 -- IOS-XE running >/= 16.5.1
 
