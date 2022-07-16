@@ -1,45 +1,3 @@
-#
-# Copyright (c) 2018  Krishna Kotha <krkotha@cisco.com>
-# All rights reserved.
-#
-# Redistribution and use in source and binary forms, with or without
-# modification, are permitted provided that the following conditions
-# are met:
-# 1. Redistributions of source code must retain the above copyright
-#    notice, this list of conditions and the following disclaimer.
-# 2. Redistributions in binary form must reproduce the above copyright
-#    notice, this list of conditions and the following disclaimer in the
-#    documentation and/or other materials provided with the distribution.
-#
-# THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
-# ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-# ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
-# FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
-# OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
-# HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
-# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
-# OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
-# SUCH DAMAGE.
-#
-# PURPOSE of this SCRIPT
-# The purpose of this script is if a interface flapped 5 times in last 5 minutes it will shutdown that interface. You can change that flapping count to what ever you want.
-# Then it will wait for 5 mins and enable that interface.
-# If still flapping atleast once it will shutdown that interface and will send an email alert.
-#
-#
-# This script monitors the interface GigabitEthernet1/0/5, change the interface ID based on your requirement.
-#
-#
-# This script requires the following variables to be defined:
-# FROM_ADDR
-# TO_ADDR
-# name-server ip address
-# http_proxy and https_proxy commands
-#
-
-# importing necessary modules
 import os
 import sys
 import cli
@@ -110,7 +68,7 @@ def send_e_mail(subject):
     # retrieve the hostname using in-built cli module
     host_name = cli.cli("show running-config | include hostname")
     FROM_ADDR = 'xxxx@cisco.com'
-    TO_ADDR = 'xxxx@gmail.com'
+    TO_ADDR = 'xxxx@cisco.com'
     
     # create the message
     msg = MIMEMultipart()
