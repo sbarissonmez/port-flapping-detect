@@ -5,12 +5,13 @@ If an interface has flapped 5 times in last 5 minutes this script will shutdown 
 This script monitors the interface GigabitEthernet1/0/5, change the interface ID based on your requirement.
 
 This script requires the following variables to be defined:
-    ```
-    FROM_ADDR
-    TO_ADDR
-    name-server ip address
-    http_proxy and https_proxy commands
-    ```
+
+```
+FROM_ADDR
+TO_ADDR
+name-server ip address
+http_proxy and https_proxy commands
+```
 ## requirements
 
 -- IOS-XE running >/= 16.5.1
